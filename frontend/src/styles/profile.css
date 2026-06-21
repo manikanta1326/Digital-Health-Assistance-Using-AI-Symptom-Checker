@@ -1,0 +1,78 @@
+.profile-page {
+  min-height: 100vh;
+  background: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  box-sizing: border-box;
+}
+
+.profile-card h1 {
+  text-align: center;
+  margin: 0 0 25px 0;
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.profile-card label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.profile-card input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  color: #0f172a;
+}
+
+.profile-card input:focus {
+  border-color: #2563eb;
+}
+
+.profile-card button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+}
+
+.profile-card button:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 24px 20px;
+  }
+}

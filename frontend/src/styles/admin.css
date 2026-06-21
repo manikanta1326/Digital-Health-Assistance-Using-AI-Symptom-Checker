@@ -1,0 +1,224 @@
+/* Container and Layout Base Context */
+.admin-page {
+  min-height: 100vh;
+  background: #f1f5f9;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.admin-page h1 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Metric Stats Row Cards Layout Setup */
+.stats-grid {
+  display: grid;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  width: 100%;
+}
+
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.admin-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .04);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.admin-card:hover {
+  transform: translateY(-4px);
+}
+
+.admin-card h3 {
+  margin-bottom: 15px;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.admin-card p {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 0;
+}
+
+/* Table Section Elements */
+.admin-content-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+.table-section {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .04);
+  box-sizing: border-box;
+}
+
+.table-section h2 {
+  color: #0f172a;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Prevent horizontal overflow table breakage */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px; /* Forces readable layout density on small viewports */
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 15px;
+}
+
+th {
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+}
+
+td {
+  color: #334155;
+}
+
+.bold-text {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Badges & Tags */
+.admin-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+.badge-high { background: #fee2e2; color: #ef4444; }
+.badge-medium { background: #fef3c7; color: #d97706; }
+.badge-low { background: #dcfce7; color: #16a34a; }
+
+.role-tag {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #e2e8f0;
+  color: #475569;
+  display: inline-block;
+  white-space: nowrap;
+}
+.role-tag.tag-admin {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.empty-row {
+  text-align: center;
+  color: #94a3b8;
+  padding: 30px 0;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   Updated Mobile Responsive Adjustments for admin.css
+   ========================================= ================================= */
+@media (max-width: 1024px) {
+  .grid-4-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 20px 12px; /* Reduces outer padding so content has more breathing room */
+  }
+
+  .admin-page h1 {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .table-section {
+    padding: 16px 12px;
+    border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Force total padding values inside box width */
+  }
+
+  /* Critical Fix: Forces the layout wrapper container to scroll instead of breaking your layout */
+  .table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    display: block;
+    -webkit-overflow-scrolling: touch; /* Smooth kinetic scrolling wrapper for iOS/Android */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+  }
+
+  table {
+    min-width: 500px; /* Forces readable layout density inside the scrollable view track */
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px 12px; /* Slightly tighter rows for small mobile viewports */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-4-cols {
+    grid-template-columns: 1fr; /* Flips metrics into a beautiful single column stack */
+    gap: 12px;
+  }
+
+  .admin-card {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .admin-card p {
+    font-size: 28px; /* Slightly downscale giant digit fonts for small panels */
+  }
+}

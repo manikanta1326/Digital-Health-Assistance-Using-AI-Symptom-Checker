@@ -1,0 +1,173 @@
+/* Base Page Styling */
+.admin-diseases-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 40px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.admin-diseases-container h1 {
+  font-size: 32px;
+  color: #0f172a;
+  margin-bottom: 30px;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 15px;
+}
+
+/* Two-column layout grid */
+.disease-management-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+  .disease-management-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Disease List Wrapper Section */
+.diseases-list-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.diseases-list-section h2 {
+  font-size: 20px;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+/* Individual Disease Row Item */
+.disease-item-row {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.disease-item-row:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.disease-info h3 {
+  margin: 0 0 6px 0;
+  color: #1e293b;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.disease-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Severity Badges */
+.severity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.severity-high { background-color: #fee2e2; color: #ef4444; }
+.severity-medium { background-color: #fef3c7; color: #d97706; }
+.severity-low { background-color: #dcfce7; color: #16a34a; }
+
+/* Buttons */
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Form Styling */
+.add-disease-form-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.add-disease-form-section h2 {
+  font-size: 20px;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  outline: none;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.submit-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px 0;
+  font-style: italic;
+}
