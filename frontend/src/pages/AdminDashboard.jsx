@@ -23,9 +23,9 @@ function AdminDashboard() {
     try {
       setLoading(true);
       const [statsRes, predictionsRes, usersRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/admin/stats"),
-        axios.get("http://localhost:5000/api/admin/recent-predictions"),
-        axios.get("http://localhost:5000/api/admin/users"),
+        axios.get("https://digital-health-backend-05jc.onrender.com/api/admin/stats"),
+        axios.get("https://digital-health-backend-05jc.onrender.com/api/admin/recent-predictions"),
+        axios.get("https://digital-health-backend-05jc.onrender.com/api/admin/users"),
       ]);
 
       setStats(statsRes.data);

@@ -49,7 +49,7 @@ function SymptomChecker() {
       );
 
       const res = await axios.post(
-        "http://localhost:5000/api/predict",
+        "https://digital-health-backend-05jc.onrender.com/api/predict",
         {
           userId: user.id,
           symptoms: selectedSymptoms,

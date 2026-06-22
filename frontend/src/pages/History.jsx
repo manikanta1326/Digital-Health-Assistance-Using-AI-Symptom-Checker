@@ -17,7 +17,7 @@ function History() {
       const user = JSON.parse(localStorage.getItem("user"));
       
       // Using user.id here to ensure it maps accurately matching your log metrics
-      const res = await axios.get(`http://localhost:5000/api/history/${user?.id || user?._id}`);
+      const res = await axios.get(`https://digital-health-backend-05jc.onrender.com/api/history/${user?.id || user?._id}`);
       
       setHistory(res.data);
     } catch (error) {

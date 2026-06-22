@@ -27,7 +27,7 @@ function Login() {
       console.log("Attempting login with:", email);
       
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://digital-health-backend-05jc.onrender.com/api/auth/login"
         { email, password }
       );
 

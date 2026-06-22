@@ -40,7 +40,7 @@ function AdminDiseases() {
       }
 
       const res = await axios.get(
-        "http://localhost:5000/api/admin/diseases", 
+        "https://digital-health-backend-05jc.onrender.com/api/admin/diseases", 
         headersConfig
       );
       
@@ -66,7 +66,7 @@ function AdminDiseases() {
   const addDisease = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/admin/diseases",
+        "https://digital-health-backend-05jc.onrender.com/api/admin/diseases",
         {
           diseaseName,
           severity,
@@ -89,7 +89,7 @@ function AdminDiseases() {
   const updateDisease = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/diseases/${editingId}`,
+         `https://digital-health-backend-05jc.onrender.com/api/admin/diseases/${editingId}`,
         {
           diseaseName,
           severity,
@@ -113,7 +113,7 @@ function AdminDiseases() {
     if (!window.confirm("Are you sure you want to delete this disease?")) return;
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/diseases/${id}`, 
+        `https://digital-health-backend-05jc.onrender.com/api/admin/diseases/${id}`, 
         getAuthHeaders()
       );
       alert("Disease Deleted");
