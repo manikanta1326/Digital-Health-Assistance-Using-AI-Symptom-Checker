@@ -23,10 +23,10 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
-        formData
-      );
+      axios.post(
+  "https://digital-health-backend-05jc.onrender.com/api/auth/register",
+  formData
+);
 
       alert(res.data.message);
       navigate("/");
