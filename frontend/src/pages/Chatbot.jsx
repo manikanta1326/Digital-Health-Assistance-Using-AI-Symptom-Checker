@@ -27,7 +27,7 @@ function Chatbot() {
 );
 
 const res = await axios.post(
-  "https://digital-health-backend-05jc.onrender.com/api/chatbot"
+  "https://digital-health-backend-05jc.onrender.com/api/chatbot",
   {
     userId: user.id,
     message,
